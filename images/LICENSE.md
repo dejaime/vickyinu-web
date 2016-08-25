@@ -1,0 +1,1 @@
+All images belong to artist Victória Oliveira (vickyinu), and cannot be used without express written authorization for any means, commercial or not.
