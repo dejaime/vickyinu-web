@@ -963,6 +963,7 @@
 
 /* Panel */
 
+
 	.panel {
 		padding: 4em 4em 2em 4em ;
 		-moz-transform: translateY(100vh);
@@ -976,13 +977,23 @@
 		-webkit-overflow-scrolling: touch;
 		background: rgba(36, 38, 41, 0.975);
 		bottom: 4em;
+		top: 0em;
 		left: 0;
-		max-height: calc(80vh - 4em);
+		height: 100%;
 		overflow-y: auto;
 		position: fixed;
 		width: 100%;
 		z-index: 10001;
 	}
+
+		.panel > .topFooterBar {
+				top: -4em;
+				left: -4em;
+				margin-right: -8em;
+				height: 10em;
+				background: #1f2224;
+				position: relative;
+		}
 
 		.panel.active {
 			-moz-transform: translateY(1px);
@@ -992,12 +1003,14 @@
 		}
 
 		.panel > .inner {
+			top: -10em;
 			margin: 0 auto;
 			max-width: 100%;
 			width: 75em;
 		}
 
 			.panel > .inner.split {
+
 				display: -moz-flex;
 				display: -webkit-flex;
 				display: -ms-flex;
@@ -1027,7 +1040,7 @@
 			opacity: 0.25;
 			position: absolute;
 			right: 0;
-			top: 0;
+			top: 10em;
 			width: 5em;
 			z-index: 2;
 		}
@@ -1428,6 +1441,19 @@
 			position: absolute;
 			right: 0;
 			top: 0;
+		}
+
+		#header a {
+			-moz-transition: background-color 0.5s ease;
+			-webkit-transition: background-color 0.5s ease;
+			-ms-transition: background-color 0.5s ease;
+			transition: background-color 0.5s ease;
+			border: 0;
+			color: #ffffff;
+			display: inline-block;
+			letter-spacing: 0.1em;
+			padding: 0 1.65em;
+			text-transform: uppercase;
 		}
 
 			#header nav > ul {
