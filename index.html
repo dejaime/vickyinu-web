@@ -124,21 +124,22 @@
 						<div>
 							<section>
 								<h2>Get in touch</h2>
-								<form method="post" action="#">
+								<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdSERok7EqrRccnQNvovExR6MIyb57KZRCPndDVLjJJiF9ybg/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
 									<div class="field half first">
-										<input type="text" name="name" id="name" placeholder="Name" />
+										<input type="text" name="entry.1314653264" id="entry.1314653264" placeholder="Name" />
 									</div>
 									<div class="field half">
-										<input type="text" name="email" id="email" placeholder="Email" />
+										<input type="text" name="entry.830371958" id="entry.830371958" placeholder="Email"/>
 									</div>
 									<div class="field">
-										<textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
+										<textarea name="entry.1902116830" id="entry.1902116830" rows="4" placeholder="Message"></textarea>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send" class="special" /></li>
+										<li><input type="submit" value="Submit" class="special" /></li>
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
 								</form>
+								<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 							</section>
 						</div>
 					</div>
@@ -152,6 +153,15 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<!-- Contact form scripts -->
+			<script type="text/javascript">var submitted=false;</script>
+			<script type="text/javascript">
+				$('#gform').on('submit', function(e) {
+				  $('#gform *').fadeOut(0);
+				  $('#gform').prepend('Your submission has been processed...');
+			  });
+			</script>
 
 	</body>
 </html>
